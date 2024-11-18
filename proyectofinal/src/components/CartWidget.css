@@ -1,0 +1,46 @@
+.cart-widget {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Más profundidad en la sombra */
+  cursor: pointer;
+  z-index: 1000; /* Asegurar que siempre esté visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cart-widget:hover {
+  transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+.cart-icon {
+  width: 35px; /* Ajustado para mayor visibilidad */
+  height: 35px;
+}
+
+.cart-quantity {
+  position: absolute;
+  top: -5px; /* Ajuste para mejor alineación */
+  right: -5px;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 6px 8px; /* Más espacio para números grandes */
+  border-radius: 50%;
+  font-size: 12px; /* Ajustado para no desbordar */
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px; /* Asegura un tamaño mínimo para mantener la forma circular */
+  min-height: 24px;
+}
+
+.cart-quantity::after {
+  content: ""; /* Soluciona problemas de desbordamiento visual */
+}
